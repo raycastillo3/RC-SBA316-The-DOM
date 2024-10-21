@@ -1,0 +1,8 @@
+body{
+    margin: 0%;
+    height: 100vh;
+    background: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamhkNXRreDJkYXhsdHFlZnJiNTYxbmU2cjB3bmZ2YjZicnVjdXNiZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WUyQbeKHhpaHrrKJu6/giphy.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
