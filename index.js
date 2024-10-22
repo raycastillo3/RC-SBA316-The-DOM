@@ -1,4 +1,13 @@
 const bodyEl = document.querySelector("body");
+const h1 = document.createElement("h1");
+h1.innerHTML = "<h1> Move Mouse To Play!</h1>";
+h1.style.color = "white";
+// Aligns h1 to the middle: 
+h1.style.position = "absolute";
+h1.style.top = "50%";
+h1.style.left = "50%"; 
+h1.style.transform = "translate(-50%, -250%)";
+bodyEl.append(h1);
 
 bodyEl.addEventListener("mousemove", (e)=>{
     const xPosition = e.offsetX;
