@@ -9,6 +9,8 @@ const loginUsername = login.elements["username"];
 const loginPassword = login.elements["password"];
 const keepMeLoggedIn = login.elements["persist"];
 
+const signIn = document.getElementById("signIn");
+
 const errorDisplay = document.getElementById("errorDisplay");
 
 function validateRegistration(e) {
@@ -207,9 +209,8 @@ function validateLogin(e) {
     return false;
   }
 
-  
-//   .innerHTML = "You've successfully logged in!";
   login.reset();
+  signIn.style.display = "block";
   return true;
 }
 
@@ -249,7 +250,7 @@ function validateKeepMeLoggedIn() {
   if (keepMe.checked) {
     alert("Success! You selected 'Keep me logged in'");
     
-    keepMeLoggedIn.focus();
+    signIn.style.display = "block";
     return false;
   }
   return true;
