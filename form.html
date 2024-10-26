@@ -11,11 +11,19 @@
   ></script>
 </head>
 <body>
+  <div id="parentEl">
+    <div id="firstEl"></div>
+    <div id="currEl"></div>
+    <div id="lastEl"></div>
+  </div>
     <div class="container">
         <div class="image-container">
             <img src="./images/spaceInvaders.png" alt="space invaders">
         </div>
         <!-- Container form -->
+         <div id="form-container1">
+           <h1>CLICK ME one time!</h1>
+         </div>
         <div class="form-container">
             <!-- Registration Side -->
             <div>
@@ -78,7 +86,7 @@
             </div>
           </div>
     </div>
-    <div id="signIn"><a href="index.html">Sign In</a></div>
+    <div id="signIn"><a href="index.html"><span id="signInText">Sign In</span></a></div>
     <script src="form.js"></script>
 </body>
 </html>

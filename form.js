@@ -13,6 +13,27 @@ const signIn = document.getElementById("signIn");
 
 const errorDisplay = document.getElementById("errorDisplay");
 
+const frag = document.createDocumentFragment();
+const div1 = document.createElement("div");
+frag.appendChild(div1)
+
+const formTitle = document.getElementById("form-container1");
+
+formTitle.addEventListener("click", ()=>{
+  formTitle.innerHTML = "<h1>PLAY NOW!!!!!</h1>"
+}); 
+
+
+//Use the parent-child-sibling relationship to navigate between elements
+const currEl = document.getElementById("currEl"); 
+// const parent = currEl.parentNode;
+const parent = currEl.parentNode;
+const lastEl = parent.lastElementChild;
+
+console.log(parent.id)
+console.log(parent.firstElementChild.id);
+console.log(lastEl.id)
+
 function validateRegistration(e) {
   e.preventDefault();
   //username
@@ -208,9 +229,8 @@ function validateLogin(e) {
     e.preventDefault();
     return false;
   }
-
+  
   login.reset();
-  signIn.style.display = "block";
   return true;
 }
 
@@ -241,19 +261,27 @@ function validateLoginPassword() {
     alert("Wrong password");
     loginPassword.focus();
     return false;
+  } 
+
+  if (localStorage.getItem(usernameValue) === passwordValue){
+    signIn.style.display = "block";
+  } else {
+    alert("wrong password"); 
+    console.log(loginUsername.textContent)
+    loginUsername.focus();
   }
+  
   return true;
 }
 
 function validateKeepMeLoggedIn() {
   const keepMe = keepMeLoggedIn;
   if (keepMe.checked) {
-    alert("Success! You selected 'Keep me logged in'");
-    
-    signIn.style.display = "block";
+    alert("Success! You selected 'Keep me logged in'");    
     return false;
   }
   return true;
 }
+
 registration.addEventListener("submit", validateRegistration);
 login.addEventListener("submit", validateLogin);
