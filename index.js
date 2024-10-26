@@ -12,7 +12,7 @@ for (let i =0; i < messages.length; i++){
     const randomIdx = Math.floor(Math.random()*messages.length);
     const message = messages[randomIdx];
     
-    //was trying to display different messages 
+    //was trying to display different messages but it didnt look good:
     // const messageEl = document.createElement("p");
     // messageEl.textContent = message
 
